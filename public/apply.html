@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Now | MaxVox Communications</title>
+    <meta name="description" content="Apply for a career at MaxVox Communications.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Oswald:wght@400;700&family=Montserrat:wght@300;400;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        :root {
+            --teal: #008080;
+            --teal-dark: #006666;
+            --charcoal: #1A202C;
+            --ink: #243044;
+            --muted: #667085;
+            --paper: #ffffff;
+            --soft: #f4f8f8;
+            --line: rgba(0, 128, 128, .18);
+            --glass: rgba(255, 255, 255, .82);
+            --danger: #c2410c;
+            --shadow: 0 28px 90px rgba(26, 32, 44, .18);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--charcoal);
+            background:
+                radial-gradient(circle at 12% 14%, rgba(0, 128, 128, .16), transparent 30rem),
+                linear-gradient(180deg, #ffffff 0%, #eef7f7 46%, #ffffff 100%);
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            padding: 20px 10%;
+            background: rgba(255, 255, 255, .88);
+            border-bottom: 2px solid var(--teal);
+            backdrop-filter: blur(18px);
+        }
+
+        .logo-text-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-main-text {
+            font-family: 'Oswald', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: var(--teal);
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        .logo-sub-text {
+            margin-top: 4px;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: var(--charcoal);
+            text-transform: uppercase;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            color: var(--charcoal);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            transition: color .25s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--teal);
+        }
+
+        .nav-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            min-height: 44px;
+            padding: 0 18px;
+            color: #fff;
+            background: var(--teal);
+            border: 1px solid var(--teal);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+            transition: all .25s ease;
+        }
+
+        .nav-cta:hover {
+            color: var(--teal);
+            background: transparent;
+        }
+
+        .hero {
+            position: relative;
+            min-height: 88vh;
+            display: grid;
+            align-items: center;
+            padding: 130px 10% 80px;
+            overflow: hidden;
+            color: #fff;
+            background:
+                linear-gradient(135deg, rgba(26, 32, 44, .9) 0%, rgba(13, 16, 22, .94) 50%, rgba(0, 128, 128, .58) 100%),
+                url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=82") center/cover;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: auto 0 0;
+            height: 150px;
+            background: linear-gradient(180deg, transparent, #ffffff);
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(320px, 430px);
+            gap: clamp(28px, 5vw, 70px);
+            align-items: center;
+            width: min(1180px, 100%);
+            margin: 0 auto;
+        }
+
+        .w4-sub-header {
+            display: block;
+            margin-bottom: 16px;
+            font-family: 'Playfair Display', serif;
+            font-size: 15px;
+            font-style: italic;
+            color: var(--teal);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            max-width: 820px;
+            margin-bottom: 26px;
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(44px, 7vw, 82px);
+            line-height: 1.03;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: rgba(255, 255, 255, .78);
+            font-size: 17px;
+            line-height: 1.85;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 34px;
+        }
+
+        .btn-primary,
+        .btn-ghost,
+        .submit-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 54px;
+            padding: 0 24px;
+            border: 1px solid var(--teal);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: transform .24s ease, background .24s ease, color .24s ease, box-shadow .24s ease;
+        }
+
+        .btn-primary,
+        .submit-btn {
+            color: #fff;
+            background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+            box-shadow: 0 18px 44px rgba(0, 128, 128, .28);
+        }
+
+        .btn-ghost {
+            color: #fff;
+            border-color: rgba(255, 255, 255, .42);
+            background: rgba(255, 255, 255, .08);
+            backdrop-filter: blur(12px);
+        }
+
+        .btn-primary:hover,
+        .btn-ghost:hover,
+        .submit-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .hero-panel {
+            padding: 30px;
+            border: 1px solid rgba(0, 128, 128, .38);
+            background: rgba(255, 255, 255, .08);
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(18px);
+            animation: rise .85s ease both;
+        }
+
+        .panel-title {
+            margin-bottom: 22px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 30px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .metric {
+            display: grid;
+            grid-template-columns: 46px 1fr;
+            gap: 14px;
+            align-items: center;
+            padding: 18px 0;
+            border-top: 1px solid rgba(255, 255, 255, .14);
+        }
+
+        .metric:first-of-type {
+            border-top: 0;
+        }
+
+        .metric i,
+        .benefit i {
+            display: grid;
+            place-items: center;
+            width: 46px;
+            height: 46px;
+            color: #fff;
+            background: var(--teal);
+        }
+
+        .metric strong,
+        .benefit strong {
+            display: block;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .metric span,
+        .benefit span {
+            display: block;
+            margin-top: 6px;
+            color: rgba(255, 255, 255, .7);
+            font-size: 13px;
+            line-height: 1.55;
+        }
+
+        .section {
+            width: min(1180px, calc(100% - 36px));
+            margin: 0 auto;
+            padding: 80px 0;
+        }
+
+        .section-heading {
+            max-width: 760px;
+            margin-bottom: 34px;
+        }
+
+        .section-heading .w4-sub-header {
+            margin-bottom: 10px;
+        }
+
+        .section-heading h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(34px, 5vw, 54px);
+            line-height: 1.1;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .section-heading p {
+            margin-top: 14px;
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .benefit {
+            min-height: 198px;
+            padding: 26px;
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, .74);
+            box-shadow: 0 18px 60px rgba(26, 32, 44, .08);
+            backdrop-filter: blur(16px);
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity .65s ease, transform .65s ease;
+        }
+
+        .benefit.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .benefit span {
+            color: var(--muted);
+        }
+
+        .form-layout {
+            display: grid;
+            grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+            gap: 24px;
+            align-items: start;
+        }
+
+        .form-aside,
+        .application-card {
+            border: 1px solid rgba(0, 128, 128, .22);
+            background: var(--glass);
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(22px);
+        }
+
+        .form-aside {
+            position: sticky;
+            top: 104px;
+            padding: 30px;
+        }
+
+        .form-aside h3,
+        .application-card h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 30px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .form-aside p {
+            margin: 14px 0 24px;
+            color: var(--muted);
+            line-height: 1.75;
+        }
+
+        .steps {
+            display: grid;
+            gap: 14px;
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 38px 1fr;
+            gap: 12px;
+            align-items: center;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .step span {
+            display: grid;
+            place-items: center;
+            width: 38px;
+            height: 38px;
+            color: #fff;
+            background: var(--charcoal);
+        }
+
+        .application-card {
+            padding: clamp(22px, 4vw, 38px);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 26px;
+        }
+
+        .field,
+        .choice-field,
+        .file-field {
+            position: relative;
+        }
+
+        .full {
+            grid-column: 1 / -1;
+        }
+
+        .field i {
+            position: absolute;
+            top: 19px;
+            left: 16px;
+            color: var(--teal);
+            pointer-events: none;
+        }
+
+        .field input,
+        .field select,
+        .field textarea {
+            width: 100%;
+            min-height: 58px;
+            padding: 23px 16px 8px 46px;
+            border: 1px solid rgba(26, 32, 44, .16);
+            outline: 0;
+            color: var(--charcoal);
+            background: rgba(255, 255, 255, .88);
+            font: inherit;
+            font-weight: 700;
+            transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+        }
+
+        .field textarea {
+            min-height: 126px;
+            resize: vertical;
+            line-height: 1.55;
+        }
+
+        .field label {
+            position: absolute;
+            top: 18px;
+            left: 46px;
+            color: #697586;
+            font-size: 13px;
+            font-weight: 700;
+            pointer-events: none;
+            transition: transform .18s ease, font-size .18s ease, color .18s ease;
+        }
+
+        .field input:focus,
+        .field select:focus,
+        .field textarea:focus {
+            border-color: var(--teal);
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(0, 128, 128, .11);
+        }
+
+        .field input:focus + label,
+        .field input:not(:placeholder-shown) + label,
+        .field textarea:focus + label,
+        .field textarea:not(:placeholder-shown) + label,
+        .field select:focus + label,
+        .field select.has-value + label {
+            transform: translateY(-12px);
+            color: var(--teal);
+            font-size: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .choice-field,
+        .file-field {
+            padding: 18px;
+            border: 1px solid rgba(26, 32, 44, .12);
+            background: rgba(255, 255, 255, .72);
+        }
+
+        .choice-label,
+        .file-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+            color: var(--charcoal);
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        .choice-label i,
+        .file-label i {
+            color: var(--teal);
+        }
+
+        .option-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .option-grid.compact {
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+        }
+
+        .option {
+            position: relative;
+        }
+
+        .option input {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .option span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 46px;
+            padding: 10px 12px;
+            border: 1px solid rgba(26, 32, 44, .14);
+            color: var(--ink);
+            background: rgba(255, 255, 255, .82);
+            font-size: 12px;
+            font-weight: 800;
+            text-align: center;
+            line-height: 1.35;
+            cursor: pointer;
+            transition: all .2s ease;
+        }
+
+        .option input:checked + span {
+            color: #fff;
+            border-color: var(--teal);
+            background: var(--teal);
+            box-shadow: 0 12px 28px rgba(0, 128, 128, .22);
+        }
+
+        .file-field input {
+            width: 100%;
+            color: var(--muted);
+            font: inherit;
+        }
+
+        .hint,
+        .error {
+            display: block;
+            margin-top: 8px;
+            min-height: 15px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .hint {
+            color: var(--muted);
+        }
+
+        .error {
+            color: var(--danger);
+        }
+
+        .invalid input,
+        .invalid select,
+        .invalid textarea,
+        .invalid.choice-field,
+        .invalid.file-field {
+            border-color: rgba(194, 65, 12, .72);
+            box-shadow: 0 0 0 4px rgba(194, 65, 12, .08);
+        }
+
+        .is-hidden {
+            display: none;
+        }
+
+        .form-alert {
+            display: none;
+            margin-top: 18px;
+            padding: 14px 16px;
+            color: #7c2d12;
+            background: #ffedd5;
+            border-left: 4px solid var(--danger);
+            font-weight: 800;
+        }
+
+        .form-alert.show {
+            display: block;
+        }
+
+        .success-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 200;
+            display: grid;
+            place-items: center;
+            padding: 24px;
+            background: rgba(26, 32, 44, .72);
+            backdrop-filter: blur(10px);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .28s ease;
+        }
+
+        .success-modal.is-visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .success-dialog {
+            width: min(440px, 100%);
+            padding: 34px;
+            border: 1px solid rgba(0, 128, 128, .32);
+            border-top: 5px solid var(--teal);
+            text-align: center;
+            background: rgba(255, 255, 255, .94);
+            box-shadow: 0 28px 90px rgba(26, 32, 44, .28);
+            transform: translateY(18px) scale(.97);
+            transition: transform .28s ease;
+        }
+
+        .success-modal.is-visible .success-dialog {
+            transform: translateY(0) scale(1);
+        }
+
+        .success-icon {
+            display: grid;
+            place-items: center;
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 20px;
+            color: #fff;
+            background: var(--teal);
+            box-shadow: 0 16px 36px rgba(0, 128, 128, .24);
+        }
+
+        .success-dialog h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 34px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .success-dialog p {
+            margin: 12px 0 24px;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        .success-ok {
+            min-width: 120px;
+            min-height: 46px;
+            border: 1px solid var(--teal);
+            color: #fff;
+            background: var(--teal);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all .24s ease;
+        }
+
+        .success-ok:hover {
+            color: var(--teal);
+            background: transparent;
+        }
+
+        .form-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            margin-top: 28px;
+            padding-top: 24px;
+            border-top: 1px solid var(--line);
+        }
+
+        .secure-note {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--muted);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .submit-btn {
+            min-width: 220px;
+        }
+
+        .submit-btn[disabled] {
+            cursor: wait;
+            opacity: .74;
+            transform: none;
+        }
+
+        .spinner {
+            display: none;
+            width: 18px;
+            height: 18px;
+            border: 2px solid rgba(255, 255, 255, .36);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin .75s linear infinite;
+        }
+
+        .submit-btn.is-loading .spinner {
+            display: inline-block;
+        }
+
+        .submit-btn.is-loading .btn-icon {
+            display: none;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes rise {
+            from { opacity: 0; transform: translateY(22px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 1040px) {
+            .hero-grid,
+            .form-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .form-aside {
+                position: static;
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 720px) {
+            .navbar {
+                padding: 16px 18px;
+            }
+
+            .nav-link {
+                display: none;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 112px 18px 70px;
+            }
+
+            .hero-panel,
+            .form-aside,
+            .application-card {
+                padding: 22px;
+            }
+
+            .benefits-grid,
+            .form-grid,
+            .option-grid,
+            .option-grid.compact {
+                grid-template-columns: 1fr;
+            }
+
+            .form-footer {
+                align-items: stretch;
+                flex-direction: column;
+            }
+
+            .submit-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <a href="/" class="logo-text-container">
+            <span class="logo-main-text">MaxVox</span>
+            <span class="logo-sub-text">Communications</span>
+        </a>
+        <div class="nav-actions">
+            <a class="nav-link" href="/"><i class="fa-solid fa-arrow-left"></i> Home</a>
+            <a class="nav-cta" href="#application"><i class="fa-solid fa-paper-plane"></i> Apply</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-grid">
+                <div>
+                    <span class="w4-sub-header">Recruitment Portal</span>
+                    <h1>Build Your Career With MaxVox</h1>
+                    <p>Apply for premium call center roles in a professional, growth-focused environment serving active U.S. campaign operations.</p>
+                    <div class="hero-actions">
+                        <a class="btn-primary" href="#application">Start Application <i class="fa-solid fa-arrow-right"></i></a>
+                        <a class="btn-ghost" href="#benefits">View Benefits <i class="fa-solid fa-chevron-down"></i></a>
+                    </div>
+                </div>
+                <aside class="hero-panel">
+                    <h2 class="panel-title">Why Apply Here</h2>
+                    <div class="metric">
+                        <i class="fa-solid fa-headset"></i>
+                        <div><strong>Campaign Roles</strong><span>CSR, verifier, closer, QA, and management opportunities.</span></div>
+                    </div>
+                    <div class="metric">
+                        <i class="fa-solid fa-user-graduate"></i>
+                        <div><strong>Training Mindset</strong><span>Suitable pathways for freshers and experienced applicants.</span></div>
+                    </div>
+                    <div class="metric">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <div><strong>Growth Focus</strong><span>Structured screening helps HR match you with the right campaign.</span></div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section" id="benefits">
+            <div class="section-heading">
+                <span class="w4-sub-header">Candidate Benefits</span>
+                <h2>A polished path into professional call center work.</h2>
+                <p>MaxVox looks for communication ability, discipline, and campaign readiness. This application captures the details HR needs to review your fit quickly.</p>
+            </div>
+            <div class="benefits-grid">
+                <article class="benefit">
+                    <i class="fa-solid fa-microphone-lines"></i>
+                    <strong>English Skill Focus</strong>
+                    <span>Share your speaking level so the team can place you with the right campaign expectations.</span>
+                </article>
+                <article class="benefit">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <strong>Multiple Positions</strong>
+                    <span>Apply for frontliner, verifier, closer, QA, or management pathways from one page.</span>
+                </article>
+                <article class="benefit">
+                    <i class="fa-solid fa-clock"></i>
+                    <strong>Shift Preference</strong>
+                    <span>Choose night, day, or flexible availability based on your schedule.</span>
+                </article>
+                <article class="benefit">
+                    <i class="fa-solid fa-file-shield"></i>
+                    <strong>CV Attachment</strong>
+                    <span>Upload your CV securely so HR has a complete profile during review.</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="application">
+            <div class="section-heading">
+                <span class="w4-sub-header">Apply Now</span>
+                <h2>Application Form</h2>
+                <p>Required fields are marked with an asterisk. The form validates your details before submission and prevents duplicate processing while it sends.</p>
+            </div>
+
+            <div class="form-layout">
+                <aside class="form-aside">
+                    <h3>Quick Guide</h3>
+                    <p>Use your current contact details, select all campaign interests, and upload a CV in PDF, DOC, or DOCX format.</p>
+                    <div class="steps">
+                        <div class="step"><span>1</span> Personal Details</div>
+                        <div class="step"><span>2</span> Role Preferences</div>
+                        <div class="step"><span>3</span> Submit to HR</div>
+                    </div>
+                </aside>
+
+                <form class="application-card" id="applicationForm" action="#" novalidate>
+                    <h3>Candidate Details</h3>
+                    <div class="form-grid">
+                        <div class="field" data-field>
+                            <i class="fa-solid fa-user"></i>
+                            <input id="full_name" name="full_name" type="text" placeholder=" " autocomplete="name" required>
+                            <label for="full_name">Full Name *</label>
+                            <span class="error"></span>
+                        </div>
+
+                        <div class="field" data-field>
+                            <i class="fa-solid fa-phone-volume"></i>
+                            <input id="contact" name="contact" type="tel" placeholder=" " required>
+                            <label for="contact">Contact *</label>
+                            <span class="error"></span>
+                        </div>
+
+                        <div class="choice-field full" data-group="applying_position" data-required="true">
+                            <div class="choice-label"><i class="fa-solid fa-id-badge"></i> Applying Position *</div>
+                            <div class="option-grid">
+                                <label class="option"><input type="radio" name="applying_position" value="CSR / Frontliner"><span>CSR / Frontliner</span></label>
+                                <label class="option"><input type="radio" name="applying_position" value="Self Verifier / Self Closer"><span>Self Verifier / Self Closer</span></label>
+                                <label class="option"><input type="radio" name="applying_position" value="Verifier / Closer"><span>Verifier / Closer</span></label>
+                                <label class="option"><input type="radio" name="applying_position" value="QA"><span>QA</span></label>
+                                <label class="option"><input type="radio" name="applying_position" value="Management"><span>Management</span></label>
+                            </div>
+                            <span class="error"></span>
+                        </div>
+
+                        <div class="field" data-field>
+                            <i class="fa-solid fa-address-card"></i>
+                            <input id="cnic" name="cnic" type="text" placeholder=" " inputmode="numeric" maxlength="15" required>
+                            <label for="cnic">CNIC * (37405-XXXXXXX-X)</label>
+                            <span class="error"></span>
+                        </div>
+
+                        <div class="choice-field" data-group="gender">
+                            <div class="choice-label"><i class="fa-solid fa-venus-mars"></i> Gender</div>
+                            <div class="option-grid">
+                                <label class="option"><input type="radio" name="gender" value="Male"><span>Male</span></label>
+                                <label class="option"><input type="radio" name="gender" value="Female"><span>Female</span></label>
+                            </div>
+                            <span class="error"></span>
+                        </div>
+
+                        <div class="field" data-field>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <input id="current_residential_area" name="current_residential_area" type="text" placeholder=" " required>
+                            <label for="current_residential_area">Current Residential Area *</label>
+                            <span class="error"></span>
+                        </div>
+
+                        <div class="field" data-field>
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <select id="highest_qualification" name="highest_qualification" required>
+                                <option value=""></option>
+                                <option>Intermediate / A-Level</option>
+                                <option>Bachelors (BA, BSc, BS, BCom)</option>
+                                <option>Masters</option>
+                                <option>DAE</option>
+                                <option>Other</option>
+                            </select>
+                            <label for="highest_qualification">Highest Educational Qualification *</label>
+                            <span class="error"></span>
+                        </div>
+
+                        <div class="choice-field full" data-group="english_skill" data-required="true">
+                            <div class="choice-label"><i class="fa-solid fa-language"></i> English Speaking Skill *</div>
+                            <div class="option-grid compact">
+                                <label class="option"><input type="radio" name="english_skill" value="1 - Basic"><span>1 = Basic</span></label>
+                                <label class="option"><input type="radio" name="english_skill" value="2"><span>2</span></label>
+                                <label class="option"><input type="radio" name="english_skill" value="3"><span>3</span></label>
+                                <label class="option"><input type="radio" name="english_skill" value="4"><span>4</span></label>
+                                <label class="option"><input type="radio" name="english_skill" value="5 - Fluent / Excellent"><span>5 = Fluent / Excellent</span></label>
+                            </div>
+                            <span class="error"></span>
+                        </div>
+
+                        <div class="choice-field full" data-group="prior_experience" data-required="true">
+                            <div class="choice-label"><i class="fa-solid fa-headset"></i> Prior Call Center Experience *</div>
+                            <div class="option-grid">
+                                <label class="option"><input type="radio" name="prior_experience" value="No (Fresher)"><span>No (Fresher)</span></label>
+                                <label class="option"><input type="radio" name="prior_experience" value="Yes (Experienced)"><span>Yes (Experienced)</span></label>
+                            </div>
+                            <span class="error"></span>
+                        </div>
+
+                        <div class="field full is-hidden" id="experienceDetails" data-field>
+                            <i class="fa-solid fa-building"></i>
+                            <input id="previous_company_campaign_duration" name="previous_company_campaign_duration" type="text" placeholder=" ">
+                            <label for="previous_company_campaign_duration">Previous Company, Campaign & Duration</label>
+                            <span class="error"></span>
+                        </div>
+
+                        <div class="choice-field full" data-group="campaign_applying_for" data-required="true">
+                            <div class="choice-label"><i class="fa-solid fa-bullhorn"></i> Campaign Applying For *</div>
+                            <div class="option-grid">
+                                <label class="option"><input type="checkbox" name="campaign_applying_for[]" value="Medicare"><span>Medicare</span></label>
+                                <label class="option"><input type="checkbox" name="campaign_applying_for[]" value="Final Expense"><span>Final Expense</span></label>
+                                <label class="option"><input type="checkbox" name="campaign_applying_for[]" value="Affordable Care Act (ACA)"><span>Affordable Care Act (ACA)</span></label>
+                                <label class="option"><input type="checkbox" name="campaign_applying_for[]" value="Not Sure / Any Campaign"><span>Not Sure / Any Campaign</span></label>
+                            </div>
+                            <span class="error"></span>
+                        </div>
+
+                        <div class="choice-field full" data-group="shift_preference" data-required="true">
+                            <div class="choice-label"><i class="fa-solid fa-clock"></i> Shift Preference *</div>
+                            <div class="option-grid">
+                                <label class="option"><input type="radio" name="shift_preference" value="Night Shift (International)"><span>Night Shift (International)</span></label>
+                                <label class="option"><input type="radio" name="shift_preference" value="Day Shift"><span>Day Shift</span></label>
+                                <label class="option"><input type="radio" name="shift_preference" value="Any Shift / Flexible"><span>Any Shift / Flexible</span></label>
+                            </div>
+                            <span class="error"></span>
+                        </div>
+
+                        <div class="field full" data-field>
+                            <i class="fa-solid fa-share-nodes"></i>
+                            <select id="referral_source" name="referral_source">
+                                <option value=""></option>
+                                <option>Facebook Ad / Social Media</option>
+                                <option>WhatsApp Job Group</option>
+                                <option>Friend / Staff Reference</option>
+                                <option>Walk-in Banner / Poster</option>
+                                <option>Other</option>
+                            </select>
+                            <label for="referral_source">How did you hear about MaxVox?</label>
+                            <span class="error"></span>
+                        </div>
+
+                        <div class="file-field full" data-file>
+                            <label class="file-label" for="cv"><i class="fa-solid fa-file-arrow-up"></i> Upload CV</label>
+                            <input id="cv" name="cv" type="file" accept=".pdf,.doc,.docx">
+                            <span class="hint">PDF, DOC, or DOCX only. Maximum file size: 5 MB.</span>
+                            <span class="error"></span>
+                        </div>
+
+                        <div class="field full" data-field>
+                            <i class="fa-solid fa-note-sticky"></i>
+                            <textarea id="additional_notes" name="additional_notes" placeholder=" "></textarea>
+                            <label for="additional_notes">Additional Notes</label>
+                            <span class="error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-alert" id="formAlert">Please review the highlighted fields before submitting.</div>
+
+                    <div class="form-footer">
+                        <div class="secure-note"><i class="fa-solid fa-lock"></i> Sent directly to MaxVox HR.</div>
+                        <button class="submit-btn" id="submitBtn" type="button">
+                            <span class="spinner"></span>
+                            <span class="btn-text">Submit Application</span>
+                            <i class="btn-icon fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div class="success-modal" id="successModal" role="dialog" aria-modal="true" aria-labelledby="successTitle">
+        <div class="success-dialog">
+            <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+            <h3 id="successTitle">Thank You!</h3>
+            <p>Your application has been submitted successfully.</p>
+            <button class="success-ok" id="successOk" type="button">OK</button>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById("applicationForm");
+        const submitBtn = document.getElementById("submitBtn");
+        const formAlert = document.getElementById("formAlert");
+        const experienceDetails = document.getElementById("experienceDetails");
+        const previousExperienceInput = document.getElementById("previous_company_campaign_duration");
+        const cnicInput = document.getElementById("cnic");
+        const successModal = document.getElementById("successModal");
+        const successOk = document.getElementById("successOk");
+
+        const setError = (wrapper, message) => {
+            wrapper.classList.toggle("invalid", Boolean(message));
+            const error = wrapper.querySelector(".error");
+            if (error) error.textContent = message || "";
+        };
+
+        const validPhone = (value) => /^[0-9+\-\s()]{7,20}$/.test(value);
+        const validCnic = (value) => /^\d{5}-\d{7}-\d$/.test(value);
+
+        const formatCnic = (value) => {
+            const digits = value.replace(/\D/g, "").slice(0, 13);
+            const first = digits.slice(0, 5);
+            const second = digits.slice(5, 12);
+            const third = digits.slice(12, 13);
+
+            return [first, second, third].filter(Boolean).join("-");
+        };
+
+        cnicInput.addEventListener("input", () => {
+            cnicInput.value = formatCnic(cnicInput.value);
+            validateInput(cnicInput);
+        });
+
+        const syncSelectLabel = (select) => {
+            select.classList.toggle("has-value", Boolean(select.value));
+        };
+
+        document.querySelectorAll("select").forEach((select) => {
+            select.addEventListener("change", () => syncSelectLabel(select));
+            syncSelectLabel(select);
+        });
+
+        const selectedValue = (name) => {
+            const checked = form.querySelector(`[name="${name}"]:checked`);
+            return checked ? checked.value : "";
+        };
+
+        const syncExperienceField = () => {
+            const experienced = selectedValue("prior_experience") === "Yes (Experienced)";
+            experienceDetails.classList.toggle("is-hidden", !experienced);
+            previousExperienceInput.required = experienced;
+            if (!experienced) {
+                previousExperienceInput.value = "";
+                setError(experienceDetails, "");
+            }
+        };
+
+        form.querySelectorAll('[name="prior_experience"]').forEach((radio) => {
+            radio.addEventListener("change", syncExperienceField);
+        });
+        syncExperienceField();
+
+        form.querySelectorAll('[name="campaign_applying_for[]"]').forEach((checkbox) => {
+            checkbox.addEventListener("change", () => {
+                if (!checkbox.checked) return;
+
+                form.querySelectorAll('[name="campaign_applying_for[]"]').forEach((other) => {
+                    if (other !== checkbox) other.checked = false;
+                });
+            });
+        });
+
+        const validateInput = (input) => {
+            const wrapper = input.closest("[data-field]") || input.closest("[data-file]");
+            if (!wrapper || wrapper.classList.contains("is-hidden")) return true;
+
+            const value = input.value.trim();
+            let message = "";
+
+            if (input.required && !value) {
+                message = "This field is required.";
+            } else if ((input.name === "contact") && value && !validPhone(value)) {
+                message = "Enter a valid contact number.";
+            } else if (input.name === "cnic" && value && !validCnic(value)) {
+                message = "Use CNIC format 37405-1234567-1.";
+            } else if (input.type === "file" && input.files.length) {
+                const file = input.files[0];
+                const allowedExt = /\.(pdf|doc|docx)$/i.test(file.name);
+                if (!allowedExt) {
+                    message = "Upload PDF, DOC, or DOCX only.";
+                } else if (file.size > 5 * 1024 * 1024) {
+                    message = "CV must be 5 MB or smaller.";
+                }
+            }
+
+            setError(wrapper, message);
+            return !message;
+        };
+
+        const validateGroup = (group) => {
+            const groupName = group.dataset.group;
+            const required = group.dataset.required === "true";
+            if (!required) {
+                setError(group, "");
+                return true;
+            }
+
+            const checked = form.querySelectorAll(`[name="${groupName}"]:checked, [name="${groupName}[]"]:checked`);
+            const valid = checked.length > 0;
+            setError(group, valid ? "" : "Please select an option.");
+            return valid;
+        };
+
+        form.querySelectorAll("input, select, textarea").forEach((input) => {
+            input.addEventListener("input", () => validateInput(input));
+            input.addEventListener("change", () => {
+                validateInput(input);
+                const group = input.closest(".choice-field");
+                if (group) validateGroup(group);
+            });
+            input.addEventListener("blur", () => validateInput(input));
+        });
+
+        const fieldValue = (selector, fallback = "Not provided") => {
+            const field = form.querySelector(selector);
+            if (!field) return fallback;
+
+            const value = (field.value || "").trim();
+            return value || fallback;
+        };
+
+        const checkedValue = (name, fallback = "Not provided") => {
+            const checked = form.querySelector(`[name="${name}"]:checked`);
+            return checked ? checked.value : fallback;
+        };
+
+        const selectedCampaign = () => {
+            const checked = form.querySelector('[name="campaign_applying_for[]"]:checked');
+            return checked ? checked.value : "Not provided";
+        };
+
+        const uploadCvForWhatsApp = async () => {
+            const cv = document.getElementById("cv");
+            if (!cv || !cv.files || !cv.files.length) {
+                return "";
+            }
+
+            const data = new FormData();
+            data.append("cv", cv.files[0]);
+
+            const response = await fetch("upload_cv.php", {
+                method: "POST",
+                body: data,
+            });
+
+            const result = await response.json();
+            if (!response.ok || !result.success) {
+                throw new Error(result.message || "CV upload failed.");
+            }
+
+            return result.url || "";
+        };
+
+        const buildWhatsAppMessage = (cvUrl = "") => {
+            const experience = checkedValue("prior_experience");
+            const experienced = experience === "Yes (Experienced)";
+            const previousCompany = experienced
+                ? fieldValue('[name="previous_company_campaign_duration"]')
+                : "Fresher";
+            const cvLine = cvUrl || "Not uploaded";
+
+            return [
+                "NEW JOB APPLICATION",
+                "",
+                "(1) Full Name:",
+                fieldValue('[name="full_name"]'),
+                "",
+                "(2) Contact:",
+                fieldValue('[name="contact"]'),
+                "",
+                "(3) Email:",
+                fieldValue('[name="email"]'),
+                "",
+                "(4) Position:",
+                checkedValue("applying_position"),
+                "",
+                "(5) CNIC:",
+                fieldValue('[name="cnic"]'),
+                "",
+                "(6) Gender:",
+                checkedValue("gender"),
+                "",
+                "(7) Residential Area:",
+                fieldValue('[name="current_residential_area"]'),
+                "",
+                "(8) Qualification:",
+                fieldValue('[name="highest_qualification"]'),
+                "",
+                "(9) English Speaking Skill:",
+                checkedValue("english_skill"),
+                "",
+                "(10) Experience:",
+                experienced ? "Experienced" : "Fresher",
+                "",
+                "(11) Previous Company:",
+                previousCompany,
+                "",
+                "(12) Campaign:",
+                selectedCampaign(),
+                "",
+                "(13) Shift Preference:",
+                checkedValue("shift_preference"),
+                "",
+                "(14) Heard From:",
+                fieldValue('[name="referral_source"]'),
+                "",
+                `(15) CV Link: ${cvLine}`,
+                "",
+                "(16) Additional Notes:",
+                fieldValue('[name="additional_notes"]'),
+            ].join("\n");
+        };
+
+        const showSuccessModal = () => {
+            successModal.classList.add("is-visible");
+            successOk.focus();
+        };
+
+        successOk.addEventListener("click", () => {
+            successModal.classList.remove("is-visible");
+            form.reset();
+            document.querySelectorAll("select").forEach(syncSelectLabel);
+            syncExperienceField();
+            window.location.reload();
+        });
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+        });
+
+        submitBtn.addEventListener("click", async () => {
+            syncExperienceField();
+            const inputValid = Array.from(form.querySelectorAll("input, select, textarea")).every(validateInput);
+            const groupValid = Array.from(form.querySelectorAll(".choice-field")).every(validateGroup);
+
+            if (!inputValid || !groupValid) {
+                formAlert.classList.add("show");
+                const firstInvalid = form.querySelector(".invalid input, .invalid select, .invalid textarea, .invalid");
+                if (firstInvalid) firstInvalid.scrollIntoView({ behavior: "smooth", block: "center" });
+                return;
+            }
+
+            formAlert.classList.remove("show");
+            submitBtn.disabled = true;
+            submitBtn.classList.add("is-loading");
+            submitBtn.querySelector(".btn-text").textContent = "Processing...";
+
+            const whatsappWindow = window.open("about:blank", "_blank");
+
+            try {
+                const cvUrl = await uploadCvForWhatsApp();
+                const message = buildWhatsAppMessage(cvUrl);
+                const whatsappUrl = `https://wa.me/923205042512?text=${encodeURIComponent(message)}`;
+
+                if (whatsappWindow) {
+                    whatsappWindow.location.href = whatsappUrl;
+                } else {
+                    window.open(whatsappUrl, "_blank");
+                }
+
+                showSuccessModal();
+            } catch (error) {
+                if (whatsappWindow) whatsappWindow.close();
+                formAlert.textContent = error.message || "CV could not be uploaded. Please try again.";
+                formAlert.classList.add("show");
+            }
+
+            window.setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.classList.remove("is-loading");
+                submitBtn.querySelector(".btn-text").textContent = "Submit Application";
+            }, 500);
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) entry.target.classList.add("is-visible");
+            });
+        }, { threshold: .18 });
+
+        document.querySelectorAll(".benefit").forEach((card, index) => {
+            card.style.transitionDelay = `${index * 90}ms`;
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
